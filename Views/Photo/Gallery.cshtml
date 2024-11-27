@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Photo>
+
+<h2>Uploaded Images</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var photo in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/@(photo.ImagePath.Replace("wwwroot/", ""))" alt="Uploaded Image" width="200" />
+                </td>
+                <td>@photo.Description</td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@photo.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

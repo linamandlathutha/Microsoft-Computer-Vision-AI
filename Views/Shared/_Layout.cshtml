@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic 3D Interface</title>
+    <link rel="stylesheet" href="~/css/stylevision.css">
+</head>
+<body>
+    <!-- Shared Layout: Header -->
+    <header class="header">
+        <div class="logo">FutureTech</div>
+        <nav class="navbar">
+            <ul>
+                <li><a asp-controller="Photo" asp-action="Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a asp-controller="Photo" asp-action="Upload">Scan Image</a></li>
+                <li><a asp-controller="Photo" asp-action="Gallery"> History</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+
+    <!-- Shared Layout: Footer -->
+   
+
+    <script src="script.js"></script>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 FutureTech. All rights reserved. <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+   
+</body>
+</html>

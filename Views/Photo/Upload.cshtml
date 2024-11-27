@@ -1,0 +1,18 @@
+﻿@model IFormFile
+
+<h2>Upload an Image</h2>
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" />
+    <button type="submit">Upload</button>
+</form>
+
+@if (ViewBag.Description != null)
+{
+    <h3>Description</h3>
+    <p>@ViewBag.Description</p>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-warning">@ViewBag.Message</div>
+}

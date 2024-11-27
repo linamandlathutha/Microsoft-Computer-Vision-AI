@@ -1,0 +1,12 @@
+﻿@model WebApplication23.Models.Photo
+
+<h2>Upload an Image</h2>
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" />
+    <button type="submit">Upload</button>
+</form>
+
+@Html.DisplayFor(des=>des.Description)
+
+
+
